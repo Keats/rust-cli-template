@@ -9,12 +9,12 @@ ignore = [
 ]
 
 cleanup = [
-    {name = "license", value = "None", paths = ["{{bin}}/LICENSE"]},
-    {name = "changelog", value = false, paths = ["{{bin}}/CHANGELOG"]},
-    {name = "on_github", value = false, paths = ["{{bin}}/.travis.yml", "{{bin}}/appveyor.yml", "{{bin}}/ci"]},
-    {name = "shell_completions", value = false, paths = ["{{bin}}/build.rs", "{{bin}}/completions"]},
-    {name = "editorconfig", value = false, paths = ["{{bin}}/.editorconfig"]},
-    {name = "fancy_term", value = false, paths = ["{{bin}}/src/terminal.rs"]},
+    {name = "license", value = "None", paths = ["{{project_name}}/LICENSE"]},
+    {name = "changelog", value = false, paths = ["{{project_name}}/CHANGELOG"]},
+    {name = "on_github", value = false, paths = ["{{project_name}}/.travis.yml", "{{project_name}}/appveyor.yml", "{{project_name}}/ci"]},
+    {name = "shell_completions", value = false, paths = ["{{project_name}}/build.rs", "{{project_name}}/completions"]},
+    {name = "editorconfig", value = false, paths = ["{{project_name}}/.editorconfig"]},
+    {name = "fancy_term", value = false, paths = ["{{project_name}}/src/terminal.rs"]},
 ]
 
 [[variables]]
