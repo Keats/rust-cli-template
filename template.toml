@@ -1,0 +1,99 @@
+name = "Rust CLI template"
+description = "A template to get started with a Rust CLI application on the right foot"
+kickstart_version = 1
+ignore = [
+    ".gitignore",
+    "README.md",
+    "LICENSE",
+    ".travis.yml",
+]
+
+cleanup = [
+    {name = "license", value = "None", paths = ["{{bin}}/LICENSE"]},
+    {name = "changelog", value = false, paths = ["{{bin}}/CHANGELOG"]},
+    {name = "on_github", value = false, paths = ["{{bin}}/.travis.yml", "{{bin}}/appveyor.yml", "{{bin}}/ci"]},
+    {name = "shell_completions", value = false, paths = ["{{bin}}/build.rs", "{{bin}}/completions"]},
+]
+
+[[variables]]
+name = "project_name"
+default = "My-CLI"
+prompt = "What's the name of the project?"
+validation = "^([a-zA-Z][a-zA-Z0-9_-]+)$"
+
+[[variables]]
+name = "bin"
+default = "my-cli"
+prompt = "What's the name of the executable?"
+validation = "^([a-zA-Z][a-zA-Z-_]+)$"
+
+[[variables]]
+name = "description"
+default = "A CLI application"
+prompt = "A short description of the app?"
+
+[[variables]]
+name = "author"
+default = "No One"
+prompt = "What is your name?"
+
+[[variables]]
+name = "email"
+default = "no@one.com"
+prompt = "What is your email?"
+
+[[variables]]
+name = "license"
+default = "MIT"
+prompt = "Which open-source license do you want to use?"
+choices = [
+    "MIT",
+    "BSD",
+    "GPLv3",
+    "None",
+]
+
+[[variables]]
+name = "on_github"
+default = true
+prompt = "Will the project be hosted on GitHub?"
+
+[[variables]]
+name = "gh_username"
+default = ""
+prompt = "What is your GitHub username?"
+only_if = { name = "on_github", value = true }
+
+[[variables]]
+name = "publish_binaries"
+default = true
+prompt = "Do you want to publish binary releases for Linux, MacOs and Windows?"
+only_if = { name = "on_github", value = true }
+
+[[variables]]
+name = "gh_token"
+default = "REPLACE_ME"
+prompt = "What is the Travis encrypted Travis token?"
+only_if = { name = "publish_binaries", value = true }
+
+[[variables]]
+name = "appveyor_token"
+default = "REPLACE_ME"
+prompt = "What is the AppVeyor encrypted Travis token?"
+only_if = { name = "publish_binaries", value = true }
+
+[[variables]]
+name = "ci_notifications"
+default = false
+prompt = "Do you want to be notified by email for every CI build?"
+only_if = { name = "publish_binaries", value = true }
+
+[[variables]]
+name = "changelog"
+default = true
+prompt = "Do you want to keep a changelog?"
+
+[[variables]]
+name = "shell_completions"
+default = true
+prompt = "Do you want to generate shell completions?"
