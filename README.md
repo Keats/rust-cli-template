@@ -29,7 +29,7 @@ $ travis encrypt $TOKEN
 
 Copy the output somewhere, we will need it later!
 
-## Encrypt it for AppVeyor
+### Encrypt it for AppVeyor
 Go to https://ci.appveyor.com/tools/encrypt and encrypt the same GitHub token or another one
 with the same `public_repo` permission. You will also need that later!
 
