@@ -8,16 +8,18 @@ hosted on GitHub.
 - CLI app setup
 - CI setup
 - Cross-platform binary release via [trust](https://github.com/japaric/trust)
-- Completion scripts setup
+- Shell completion scripts setup
 - Various repo housekeeping: changelog, editorconfig etc
 
+All of the above is optional: you can pick only the features you want.
+
 ## Pre-requisites
-If you want to enable the publication of binaroes, you will need to do the following first.
+If you want to enable the publication of binaries, you will need to do the following steps first.
 
 ### Get a GitHub token
 Go to https://github.com/settings/tokens/new and create a `public_repo` token.
 
-### Travis
+### Encrypt it for Travis
 Encrypt the token by using the `travis` gem:
 
 ```bash
@@ -26,13 +28,13 @@ $ travis encrypt $TOKEN
 
 Copy the output somewhere, we will need it later!
 
-## AppVeyor
+## Encrypt it for AppVeyor
 Go to https://ci.appveyor.com/tools/encrypt and encrypt the same GitHub token or another one
 with the same `public_repo` permission. You will also need that later!
 
 ## Get started
 This is a [kickstart template](https://github.com/Keats/kickstart) so you
-will need to have that installed:
+will need to have `kickstart` installed:
 
 ```bash
 $ cargo install kickstart
@@ -44,10 +46,10 @@ Once you have it installed and have the encrypted tokens generated above if need
 $ kickstart https://github.com/Keats/rust-cli-template
 ```
 
-
 ## Steps left for you
 
-- Check that the name repo name in the badges in the README match the actual one
+- Check that the name repo name in the badges in the README match the actual one: it uses the project
+name by default
 
 
 ## Template TODOs
