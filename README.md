@@ -1,12 +1,18 @@
 # rust-cli-template
 
-A template to get started with writing cross-platforms CLI applications.
+A template to get started with writing cross-platforms CLI applications
+hosted on GitHub.
+
+## Features
+
+- CLI app setup
+- CI setup
+- Cross-platform binary release via [trust](https://github.com/japaric/trust)
+- Completion scripts setup
+- Various repo housekeeping: changelog, editorconfig etc
 
 ## Pre-requisites
-
-The project needs to be hosted on GitHub to allow the publication of binaries.
-If you want to automatically publish binaries when pushing a Git version,
-you will need to do the following first.
+If you want to enable the publication of binaroes, you will need to do the following first.
 
 ### Get a GitHub token
 Go to https://github.com/settings/tokens/new and create a `public_repo` token.
@@ -38,14 +44,12 @@ Once you have it installed and have the encrypted tokens generated above if need
 $ kickstart https://github.com/Keats/rust-cli-template
 ```
 
-## Features
-
-- CLI app setup
-- CI setup
-- Cross-platform binary release via [trust](https://github.com/japaric/trust)
-- Completion scripts setup
-- Various repo housekeeping: changelog, editorconfig etc
 
 ## Steps left for you
 
 - Check that the name repo name in the badges in the README match the actual one
+
+
+## Template TODOs
+
+- Is there an equivalent to Trust for GitLab?
