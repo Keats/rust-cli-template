@@ -13,6 +13,7 @@ cleanup = [
     {name = "changelog", value = false, paths = ["{{bin}}/CHANGELOG"]},
     {name = "on_github", value = false, paths = ["{{bin}}/.travis.yml", "{{bin}}/appveyor.yml", "{{bin}}/ci"]},
     {name = "shell_completions", value = false, paths = ["{{bin}}/build.rs", "{{bin}}/completions"]},
+    {name = "editorconfig", value = false, paths = ["{{bin}}/.editorconfig"]},
 ]
 
 [[variables]]
@@ -97,3 +98,8 @@ prompt = "Do you want to keep a changelog?"
 name = "shell_completions"
 default = true
 prompt = "Do you want to generate shell completions?"
+
+[[variables]]
+name = "editorconfig"
+default = true
+prompt = "Do you want to use editorconfig (https://editorconfig.org)?"

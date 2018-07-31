@@ -44,6 +44,7 @@ $ kickstart https://github.com/Keats/rust-cli-template
 - CI setup
 - Cross-platform binary release via [trust](https://github.com/japaric/trust)
 - Completion scripts setup
+- Various repo housekeeping: changelog, editorconfig etc
 
 ## Steps left for you
 
