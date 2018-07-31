@@ -5,7 +5,8 @@ hosted on GitHub.
 
 ## Features
 
-- CLI app setup
+- CLI app setup with clap
+- Optional terminal colours & styling
 - CI setup
 - Cross-platform binary release via [trust](https://github.com/japaric/trust)
 - Shell completion scripts setup

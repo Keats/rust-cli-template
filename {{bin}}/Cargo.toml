@@ -3,15 +3,20 @@ name = "{{project_name}}"
 description = "{{description}}"
 version = "0.1.0"
 authors = ["{{author}} <{{email}}>"]
+autobins = false
 {% if license != "None" -%}
 license = "{{license}}"
 {%- endif %}
 
 [[bin]]
 name = "{{bin}}"
+path = "src/main.rs"
 
 [dependencies]
 clap = "2"
+{% if fancy_term -%}
+term = "0.5"
+{%- endif -%}
 
 {%- if shell_completions %}
 

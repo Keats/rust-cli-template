@@ -14,6 +14,7 @@ cleanup = [
     {name = "on_github", value = false, paths = ["{{bin}}/.travis.yml", "{{bin}}/appveyor.yml", "{{bin}}/ci"]},
     {name = "shell_completions", value = false, paths = ["{{bin}}/build.rs", "{{bin}}/completions"]},
     {name = "editorconfig", value = false, paths = ["{{bin}}/.editorconfig"]},
+    {name = "fancy_term", value = false, paths = ["{{bin}}/src/terminal.rs"]},
 ]
 
 [[variables]]
@@ -90,14 +91,19 @@ prompt = "Do you want to be notified by email for every CI build?"
 only_if = { name = "publish_binaries", value = true }
 
 [[variables]]
-name = "changelog"
-default = true
-prompt = "Do you want to keep a changelog?"
-
-[[variables]]
 name = "shell_completions"
 default = true
 prompt = "Do you want to generate shell completions?"
+
+[[variables]]
+name = "fancy_term"
+default = false
+prompt = "Do you want to add colours/style to the terminal output?"
+
+[[variables]]
+name = "changelog"
+default = true
+prompt = "Do you want to keep a changelog?"
 
 [[variables]]
 name = "editorconfig"
