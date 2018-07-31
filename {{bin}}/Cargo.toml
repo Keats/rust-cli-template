@@ -1,5 +1,5 @@
 [package]
-name = "{{project_name | slugify}}"
+name = "{{project_name}}"
 description = "{{description}}"
 version = "0.1.0"
 authors = ["{{author}} <{{email}}>"]

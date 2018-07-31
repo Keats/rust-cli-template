@@ -6,7 +6,7 @@ pub(crate) fn new_error(kind: ErrorKind) -> Error {
     Error(Box::new(kind))
 }
 
-/// A type alias for `Result<T, {{project_name | slugify}}::Error>`.
+/// A type alias for `Result<T, {{project_name}}::Error>`.
 pub type Result<T> = result::Result<T, Error>;
 
 /// An error that can occur when encoding/decoding JWTs
