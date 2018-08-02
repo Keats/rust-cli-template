@@ -87,6 +87,8 @@ branches:
 
 notifications:
   - provider: Email
+    to:
+      - {{email}}
     on_build_success: {{ci_notifications | default(value=false)}}
 
 # Building is done in the test phase, so we disable Appveyor's build phase.
