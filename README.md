@@ -17,21 +17,27 @@ All of the above is optional: you can pick only the features you want.
 ## Pre-requisites
 If you want to enable the publication of binaries, you will need to do the following steps first.
 
-### Get a GitHub token
-Go to https://github.com/settings/tokens/new and create a `public_repo` token.
+### Create the GitHub repo
+You might also need to enable it in Travis/AppVeyor.
 
-### Encrypt it for Travis
+### Encrypt a GH token for Travis
+Go to https://github.com/settings/tokens/new and create 1 `public_repo` tokens, the
+name is up to you but should be something like `{{project}} Travis` so it is easy to find.
+
 Encrypt the token by using the `travis` gem:
 
 ```bash
-$ travis encrypt $TOKEN
+$ travis encrypt $TOKEN -r $GH_USER/$GH_REPO
 ```
 
 Copy the output somewhere, we will need it later!
 
 ### Encrypt it for AppVeyor
-Go to https://ci.appveyor.com/tools/encrypt and encrypt the same GitHub token or another one
-with the same `public_repo` permission. You will also need that later!
+Go to https://github.com/settings/tokens/new and create 1 `public_repo` tokens, the
+name is up to you but should be something like `{{project}} AppVeyor` so it is easy to find.
+
+Go to https://ci.appveyor.com/tools/encrypt and encrypt the second GitHub token.
+As before, you will also need the output later.
 
 ## Get started
 This is a [kickstart template](https://github.com/Keats/kickstart) so you
