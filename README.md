@@ -30,6 +30,8 @@ Encrypt the token by using the `travis` gem:
 $ travis encrypt $TOKEN -r $GH_USER/$GH_REPO
 ```
 
+If your repo is using travis.com (likely now), you will also need to pass the `--com` flag.
+
 Copy the output somewhere, we will need it later!
 
 ### Encrypt it for AppVeyor
